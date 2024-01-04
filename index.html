@@ -23,7 +23,7 @@
                         <a class="nav-link" href="#">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#" onclick="mostrarProductos()">Productos</a>
+                        <a class="nav-link" href="#" onclick="mostrarSeccion('seccionProductos')">Productos</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Galería</a>
@@ -32,10 +32,10 @@
                         <a class="nav-link" href="#">Contacto</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="#" onclick="registrar()">Registrarse</a>
+                        <a class="nav-link" href="#" onclick="mostrarSeccion('seccionRegistrar')">Registrarse</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="#" onclick="iniciarSesion()">Iniciar Sesion</a>
+                        <a class="nav-link" href="#" onclick="mostrarSeccion('seccionIniciarSesion')">Iniciar Sesion</a>
                     </li>
                 </ul>
             </div>
@@ -159,32 +159,28 @@
     </footer>
 
     <script>
-        function mostrarProductos() {
-            var seccionProductos = document.getElementById("seccionProductos");
-            if (seccionProductos.style.display === "none") {
-                seccionProductos.style.display = "block";
-            } else {
-                seccionProductos.style.display = "none";
+        var seccionActual = '';
+
+        function mostrarSeccion(seccion) {
+            // Oculta la sección actual si es diferente de la nueva sección
+            if (seccionActual !== seccion) {
+                ocultarSeccion(seccionActual);
             }
+
+            // Muestra la nueva sección
+            var nuevaSeccion = document.getElementById(seccion);
+            nuevaSeccion.style.display = 'block';
+
+            // Actualiza la sección actual
+            seccionActual = seccion;
         }
-    </script>
-    <script>
-        function registrar() {
-            var seccionRegistrar = document.getElementById("seccionRegistrar");
-            if (seccionRegistrar.style.display === "none") {
-                seccionRegistrar.style.display = "block";
-            } else {
-                seccionRegistrar.style.display = "none";
-            }
-        }
-    </script>
-    <script>
-        function iniciarSesion() {
-            var seccionIniciarSesion = document.getElementById("seccionIniciarSesion");
-            if (seccionIniciarSesion.style.display === "none") {
-                seccionIniciarSesion.style.display = "block";
-            } else {
-                seccionIniciarSesion.style.display = "none";
+
+        function ocultarSeccion(seccion) {
+            var antiguaSeccion = document.getElementById(seccion);
+
+            // Verifica que el elemento exista antes de intentar ocultarlo IMPORTANTE NO ELIMINARLI
+            if (antiguaSeccion) {
+                antiguaSeccion.style.display = 'none';
             }
         }
     </script>
