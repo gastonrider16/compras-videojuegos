@@ -265,9 +265,11 @@
             if (seccionActual !== seccion) {
                 ocultarSeccion(seccionActual);
             }
+
             // Muestra la nueva sección
             var nuevaSeccion = document.getElementById(seccion);
             nuevaSeccion.style.display = 'block';
+
             // Actualiza la sección actual
             seccionActual = seccion;
         }
