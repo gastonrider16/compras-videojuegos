@@ -303,8 +303,10 @@
 
         function mostrarSeccion(seccion) {
             // Oculta la sección actual si es diferente de la nueva sección
+            restablecerCompra();
+            
             if (seccionActual !== seccion) {
-                ocultarSeccion(seccionActual);
+                ocultarSeccion(seccionActual); 
             }
 
             // Muestra la nueva sección
@@ -414,6 +416,29 @@
         // Simula el proceso de compra y muestra la confirmación
             document.getElementById('confirmacionCompra').style.display = 'block';
             return false; // Evitar que el formulario se envíe
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            // Llama a la función mostrarSeccion con el ID de la sección "Inicio"
+            mostrarSeccion('seccionInicio');
+        });
+
+        function restablecerCompra() {
+            // Ocultar la sección de compra
+            var seccionCompra = document.getElementById('seccionCompra');
+            seccionCompra.style.display = 'none';
+
+            // Limpiar los detalles de la compra
+            document.getElementById('tituloCompra').innerText = '';
+            document.getElementById('imagenCompra').src = '';
+            document.getElementById('descripcionCompra').innerText = '';
+            document.getElementById('precioCompra').innerText = '';
+
+            // Limpiar el formulario de medio de pago
+            document.getElementById('medioPago').value = 'efectivo';
+
+            // Ocultar la confirmación de compra
+            document.getElementById('confirmacionCompra').style.display = 'none';
         }
     </script>
 
