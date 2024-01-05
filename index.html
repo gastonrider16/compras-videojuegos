@@ -225,21 +225,21 @@
                 <p id="precioCompra"></p>
 
                 <!-- Formulario de Medio de Pago -->
-                <form onsubmit="return confirmarCompra();">
+                <form onsubmit="mostrarContenidoMedioPago();">
                     <label for="medioPago">Selecciona tu medio de pago:</label>
                     <select id="medioPago" class="form-select mb-3" required>
                         <option value="efectivo">Efectivo</option>
                         <option value="mercadoPago">Mercado Pago</option>
                         <option value="tarjetaDebito">Tarjeta de Débito</option>
                     </select>
-                    <button type="submit" class="btn btn-success" onclick="mostrarContenidoMedioPago();">Realizar Operacion</button>
+                    <button type="submit" class="btn btn-success">Realizar Operacion</button>
                 </form>
             </div>
         </div>
     </section>
 
 
-    <section class="container my-5 medio-pago" id="efectivo" style="display: none;">
+    <section class="container my-5 mediopago" id="efectivo" style="display: none;">
         <h2>Detalles de Pago en Efectivo</h2>
         <label for="formaPagoEfectivo">Selecciona la forma de pago:</label>
         <select id="formaPagoEfectivo" class="form-select mb-3" required>
@@ -333,11 +333,6 @@
         </form>
     </section>
 
-    <!-- Confirmación de Compra -->
-    <section class="container my-5" style="display: none;">
-        <h2>¡Compra Exitosa!</h2>
-        <p>Gracias por tu compra. Aquí están los detalles de tu transacción:</p>
-    </section>
     <!-- Galería de Fotos -->
     <section class="container my-5" style="display: none;">
         <h2>Galería de Fotos</h2>
