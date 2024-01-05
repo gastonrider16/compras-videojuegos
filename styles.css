@@ -1,8 +1,15 @@
 body {
     font-family: 'Arial', sans-serif;
+    background-color: orange;
 }
 
 img {
     max-width: 100%;
     height: auto;
 }
+
+#flexbox {
+	background-color: yellow; 
+}
+
+

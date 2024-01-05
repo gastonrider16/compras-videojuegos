@@ -144,7 +144,7 @@
             <div class="row">
                 <div class="col-md-4 mb-4">
                     <div class="card mb-3" style="width: 18rem;">
-                        <div class="card-body">
+                        <div class="card-body" id="flexbox">
                             <h5 class="card-title text-center">Spider-Man (2018)</h5>
                             <img src="img/Spider-man.png" class="d-block mx-auto" style="height: 10rem" alt="Marvel's Spider-Man">
                             <p class="card-text">Precio: $10000.00</p>
@@ -155,7 +155,7 @@
 
                 <div class="col-md-4 mb-4">
                     <div class="card mb-3" style="width: 18rem;">
-                        <div class="card-body">
+                        <div class="card-body" id="flexbox">
                             <h5 class="card-title text-center">Super Mario Bros</h5>
                             <img src="img/Mario Bros.png" class="d-block mx-auto" style="height: 10rem" alt="Super Mario Bros">
                             <p class="card-text">Precio: $20000.00</p>
@@ -166,7 +166,7 @@
 
                 <div class="col-md-4 mb-4">
                     <div class="card mb-3" style="width: 18rem;">
-                        <div class="card-body">
+                        <div class="card-body" id="flexbox">
                             <h5 class="card-title text-center">Sonic the Hedgehog</h5>
                             <img src="img/Sonic.png" class="d-block mx-auto" style="height: 10rem" alt="Sonic the Hedgehog">
                             <p class="card-text">Precio: $5000.00</p>
@@ -179,7 +179,7 @@
             <div class="row">
                 <div class="col-md-4 mb-4">
                     <div class="card mb-3" style="width: 18rem;">
-                        <div class="card-body">
+                        <div class="card-body" id="flexbox">
                             <h5 class="card-title text-center">Five Nights at Freddy s</h5>
                             <img src="img/Five Nights at Freddys.png" class="d-block mx-auto" style="height: 10rem" alt="Five Nights at Freddy s">
                             <p class="card-text">Precio: $15000.00</p>
@@ -190,7 +190,7 @@
 
                 <div class="col-md-4 mb-4">
                     <div class="card mb-3" style="width: 18rem;">
-                        <div class="card-body">
+                        <div class="card-body" id="flexbox">
                             <h5 class="card-title text-center">The Legend of Zelda: Breath of the Wild</h5>
                             <img src="img/The Legend of Zelda Breath of the Wild.png" class="d-block mx-auto" style="height: 10rem" alt="The Legend of Zelda: Breath of the Wild">
                             <p class="card-text">Precio: $5000.00</p>
@@ -201,7 +201,7 @@
 
                 <div class="col-md-4 mb-4">
                     <div class="card mb-3" style="width: 18rem;">
-                        <div class="card-body">
+                        <div class="card-body" id="flexbox">
                             <h5 class="card-title text-center">The Last of Us</h5>
                             <img src="img/The Last of Us.png" class="d-block mx-auto" style="height: 10rem" alt="The Last of Us">
                             <p class="card-text">Precio: $30000.00</p>
@@ -218,7 +218,7 @@
     <section class="container my-5" id="seccionCompra" style="display: none;">
         <div class="row">
             <!-- Detalles de la Compra -->
-            <div class="col-lg-6">
+            <div class="col-lg-6" id="flexbox">
                 <h2 id="tituloCompra"></h2>
                 <img id="imagenCompra" src="" alt="Imagen del juego">
                 <p id="descripcionCompra"></p>
@@ -304,7 +304,7 @@
         function mostrarSeccion(seccion) {
             // Oculta la sección actual si es diferente de la nueva sección
             restablecerCompra();
-            
+
             if (seccionActual !== seccion) {
                 ocultarSeccion(seccionActual); 
             }
