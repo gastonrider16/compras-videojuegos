@@ -232,18 +232,79 @@
                         <option value="mercadoPago">Mercado Pago</option>
                         <option value="tarjetaDebito">Tarjeta de Débito</option>
                     </select>
-                    <button type="submit" class="btn btn-success">Confirmar Compra</button>
+                    <button type="submit" class="btn btn-success" onsubmit="return seleccionarMedioDePago();">Realizar Operacion</button>
                 </form>
             </div>
+        </div>
+    </section>
 
-            <!-- Confirmación de Compra -->
+
+    <section class="container my-5 medio-pago" id="efectivo" style="display: none;">
+        <h2>Detalles de Pago en Efectivo</h2>
+        <label for="formaPagoEfectivo">Selecciona la forma de pago:</label>
+        <select id="formaPagoEfectivo" class="form-select mb-3" required>
+            <option value="rapipago">Rapipago</option>
+            <option value="pagoFacil">PagoFácil</option>
+            <option value="pago24">Pago24</option>
+        </select>
+        <div class="mb-3">
+            <label for="direccionEfectivo">Dirección del lugas elegido para pagar:</label>
+            <input type="text" class="form-control" id="direccionEfectivo" required>
+        </div>
+        <button type="button" class="btn btn-success btn-comprar" onclick="confirmarCompra('Efectivo')">Confirmar Compra</button>
+        <!-- Confirmación de Compra -->
             <div class="col-lg-6" id="confirmacionCompra" style="display: none;">
                 <h2>¡Compra Exitosa!</h2>
                 <p>Gracias por tu compra. Aquí están los detalles de tu transacción:</p>
                 <!-- Agregar detalles de la transacción aquí -->
             </div>
-        </div>
     </section>
+
+
+    <section class="container my-5 medio-pago" id="mercadoPago" style="display: none;">
+        <h2>Detalles de Pago con Mercado Pago</h2>
+        <div class="mb-3">
+            <label for="cvuAlias">CVU o Alias de Mercado Pago:</label>
+            <input type="text" class="form-control" id="cvuAlias" required>
+        </div>
+        <button type="button" class="btn btn-success btn-comprar" onclick="confirmarCompra('Mercado Pago')">Confirmar Compra</button>
+        <!-- Confirmación de Compra -->
+            <div class="col-lg-6" id="confirmacionCompra" style="display: none;">
+                <h2>¡Compra Exitosa!</h2>
+                <p>Gracias por tu compra. Aquí están los detalles de tu transacción:</p>
+                <!-- Agregar detalles de la transacción aquí -->
+            </div>
+    </section>
+
+    <section class="container my-5 medio-pago" id="tarjetaDebito" style="display: none;">
+        <h2>Detalles de Pago con Tarjeta de Débito</h2>
+        <div class="mb-3">
+            <label for="nombreTarjeta" class="form-label">Nombre en la Tarjeta:</label>
+            <input type="text" class="form-control" id="nombreTarjeta" required>
+        </div>
+        <div class="mb-3">
+            <label for="numeroTarjeta" class="form-label">Número de Tarjeta:</label>
+            <input type="text" class="form-control" id="numeroTarjeta" required>
+        </div>
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <label for="fechaExpiracion" class="form-label">Fecha de Expiración:</label>
+                <input type="text" class="form-control" id="fechaExpiracion" placeholder="MM/AA" required>
+            </div>
+            <div class="col-md-6 mb-3">
+                <label for="cvv" class="form-label">CVV:</label>
+                <input type="text" class="form-control" id="cvv" required>
+            </div>
+        </div>
+        <button type="button" class="btn btn-success btn-comprar" onclick="confirmarCompra('Tarjeta de Débito')">Confirmar Compra</button>
+        <!-- Confirmación de Compra -->
+            <div class="col-lg-6" id="confirmacionCompra" style="display: none;">
+                <h2>¡Compra Exitosa!</h2>
+                <p>Gracias por tu compra. Aquí están los detalles de tu transacción:</p>
+                <!-- Agregar detalles de la transacción aquí -->
+            </div>
+    </section>
+
 
     <!-- medio de Pago -->
     <section class="container my-5" style="display: none;">
@@ -412,12 +473,6 @@
             return false;
         }
 
-        function confirmarCompra() {
-        // Simula el proceso de compra y muestra la confirmación
-            document.getElementById('confirmacionCompra').style.display = 'block';
-            return false; // Evitar que el formulario se envíe
-        }
-
         document.addEventListener("DOMContentLoaded", function() {
             // Llama a la función mostrarSeccion con el ID de la sección "Inicio"
             mostrarSeccion('seccionInicio');
@@ -439,6 +494,33 @@
 
             // Ocultar la confirmación de compra
             document.getElementById('confirmacionCompra').style.display = 'none';
+        }
+
+        function confirmarCompra(medioPago) {
+            document.getElementById('confirmacionCompra').style.display = 'block';
+
+            // Oculta la sección de medio de pago
+            var seccionMedioPago = document.getElementById('seccion' + medioPago.replace(/\s+/g, ''));
+            seccionMedioPago.style.display = 'none';
+
+            return true; 
+        }
+
+        function mostrarContenidoMedioPago() {
+            var medioPago = document.getElementById('medioPago').value;
+            var seccionMedioPago = document.getElementById(medioPago);
+
+            // Muestra la sección de medio de pago correspondiente
+            seccionMedioPago.style.display = 'block';
+        }
+
+        function seleccionarMedioDePago() {
+            mostrarContenidoMedioPago();
+
+            // Mostrar el formulario y ocultar la confirmación
+            document.getElementById('confirmacionCompra').style.display = 'none';
+
+            return false; // Evitar que el formulario se envíe
         }
     </script>
 
