@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Output } from '@angular/core';
+import { Seccion } from '../../seccion.enum';
 
 @Component({
     selector: 'app-menu-desplegable',
@@ -8,9 +9,10 @@ import { Component, EventEmitter, Output } from '@angular/core';
     imports: []
 })
 export class MenuDesplegableComponent {
-    @Output() inicioClick = new EventEmitter<void>();
+    Seccion = Seccion; //Increible pero cierto, borras esta linea y te saltra error en el .html
+    @Output() cambiarSeccion = new EventEmitter<Seccion>();
 
-    onInicioClick(): void {
-    this.inicioClick.emit();
+    onCambiarSeccion(seccion: Seccion): void {
+    this.cambiarSeccion.emit(seccion);
   }
 }

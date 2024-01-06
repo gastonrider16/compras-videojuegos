@@ -1,5 +1,6 @@
 <router-outlet></router-outlet>
-<app-menu-desplegable (inicioClick)="onInicioClick()"></app-menu-desplegable>
-<app-inicio [mostrarContenido]="mostrarContenidoInicio"></app-inicio>
+<app-menu-desplegable (cambiarSeccion)="cambiarSeccion($event)"></app-menu-desplegable>
+<app-inicio *ngIf="mostrarContenido(Seccion.Inicio)"></app-inicio>
+<app-productos *ngIf="mostrarContenido(Seccion.Productos)"></app-productos>
 <app-footer></app-footer>
 
