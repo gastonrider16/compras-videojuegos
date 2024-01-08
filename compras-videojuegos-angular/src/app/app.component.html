@@ -2,5 +2,8 @@
 <app-menu-desplegable (cambiarSeccion)="cambiarSeccion($event)"></app-menu-desplegable>
 <app-inicio *ngIf="mostrarContenido(Seccion.Inicio)"></app-inicio>
 <app-productos *ngIf="mostrarContenido(Seccion.Productos)"></app-productos>
+<app-iniciar-sesion *ngIf="mostrarContenido(Seccion.IniciarSesion)"></app-iniciar-sesion>
+<app-registrarse *ngIf="mostrarContenido(Seccion.Registrarse)"></app-registrarse>
+<app-contacto *ngIf="mostrarContenido(Seccion.Contacto)"></app-contacto>
 <app-footer></app-footer>
 

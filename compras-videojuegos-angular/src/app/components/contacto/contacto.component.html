@@ -1,0 +1,35 @@
+<section class="container my-5 col-md-6" id="seccionContacto">
+    <h2>Contacto</h2>
+    <form onsubmit="return validarContacto();">
+        <div class="mb-3">
+            <label for="nombreContacto" class="form-label">Nombre*</label>
+            <input type="text" class="form-control" id="nombreContacto" required>
+        </div>
+        <div class="mb-3">
+            <label for="apellidoContacto" class="form-label">Apellido*</label>
+            <input type="text" class="form-control" id="apellidoRegistro" required>
+        </div>
+        <div class="mb-3">
+            <label for="emailContacto" class="form-label">Email*</label>
+            <input type="email" class="form-control" id="emailRegistro" required>
+        </div>
+        <div class="mb-3">
+            <label for="telefonoContacto" class="form-label">Télefono*</label>
+            <input type="text" class="form-control" id="telefonoContacto" 
+            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Ej. 1122334455" required>
+        </div>
+        <div class="mb-3">
+            <label for="paisContacto" class="form-label">Pais*</label>
+            <select id="paisContacto" class="form-select mb-3" required>
+                <option value="Argentina">Argentina</option>
+                <option value="Estados Unidos">Estados Unidos</option>
+                <option value="Brasil">Brasil</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="comentariosContacto" class="form-label">Comentarios</label>
+            <textarea id="comentariosContacto" class="form-control" rows="4" placeholder="Escribe tus comentarios aquí..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-success">Enviar</button>
+    </form>
+</section>
