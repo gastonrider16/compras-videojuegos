@@ -9,13 +9,14 @@ import { Seccion } from './seccion.enum';
 import { IniciarSesionComponent } from './components/iniciar-sesion/iniciar-sesion.component';
 import { RegistrarseComponent } from './components/registrarse/registrarse.component';
 import { ContactoComponent } from './components/contacto/contacto.component';
+import { RecuperacionCuentaComponent } from './components/recuperacion-cuenta/recuperacion-cuenta.component';
 
 @Component({
     selector: 'app-root',
     standalone: true,
     templateUrl: './app.component.html',
     styleUrl: './app.component.css',
-    imports: [CommonModule, RouterOutlet, MenuDesplegableComponent, InicioComponent, FooterComponent, ProductosComponent, IniciarSesionComponent, RegistrarseComponent, ContactoComponent]
+    imports: [CommonModule, RouterOutlet, MenuDesplegableComponent, InicioComponent, FooterComponent, ProductosComponent, IniciarSesionComponent, RegistrarseComponent, ContactoComponent, RecuperacionCuentaComponent]
 })
 export class AppComponent {
   title = 'compras-videojuegos-angular';
