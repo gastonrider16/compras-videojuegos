@@ -15,7 +15,6 @@ export class ProductosComponent {
   @Output() cambiarCompraProducto = new EventEmitter<{seccion: Seccion, producto: Producto}>();//@Output() cambiarSeccion = new EventEmitter<Seccion, Producto>(); DA ERROR
 
   onCambiarCompraProducto(seccion: Seccion, producto: Producto): void {
-    console.log(`Evento emitido: Sección - ${seccion}, Producto - ${producto}`);
     this.cambiarCompraProducto.emit({seccion, producto});
   }
 }

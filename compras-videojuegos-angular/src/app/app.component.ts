@@ -31,20 +31,15 @@ export class AppComponent {
   productoActual: Producto = Producto.SpiderMan;
 
   mostrarContenido(seccion: Seccion): boolean {
-    console.log('Seccion actual:', this.seccionActual);
     return this.seccionActual === seccion;
   }
 
   cambiarSeccion(seccion: Seccion): void {
     this.seccionActual = seccion;
-    console.log('Seccion actual:', this.seccionActual);
   }
 
   cambiarCompraProducto(seccion: Seccion, producto: Producto): void {
-    console.log(`Cambiando compra - Sección: ${seccion}, Producto: ${producto}`);
     this.seccionActual = seccion;
     this.productoActual = producto;
-    console.log('Producto actual:', this.productoActual);
-    console.log('Seccion actual:', this.seccionActual);
   }
 }

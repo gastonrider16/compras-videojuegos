@@ -12,9 +12,4 @@ import { Producto } from '../../producto.enum';
 export class CompraComponent {
   Producto = Producto;
   @Input() productoSeleccionado: Producto = Producto.SpiderMan;
-
-  ngOnChanges() {
-    console.log('Producto Seleccionado en CompraComponent:', this.productoSeleccionado);
-  }
 }
-

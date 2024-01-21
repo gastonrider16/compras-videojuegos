@@ -1,7 +1,5 @@
-<section class="container my-5" id="seccionCompra" style="display: none;">
-    <p>AAAAAAAAAAAAAAAA</p>
-    <div class="col-lg-6" id="flexbox" *ngIf="productoSeleccionado === 'SpiderMan'">d
-        <script>console.log('Producto Seleccionado:', productoSeleccionado);</script>
+<section class="container my-5" id="seccionCompra">
+    <div class="col-lg-6" id="flexbox" *ngIf="productoSeleccionado === Producto.SpiderMan">
         <h5 class="card-title text-center">Spider-Man (2018)</h5>
         <img src="assets/img/Spider-man.png" class="d-block mx-auto" style="height: 10rem" alt="Marvel's Spider-Man">
         <p class="card-text">Precio: $10000.00</p>
@@ -16,7 +14,6 @@
         </form>
     </div>
     <div class="col-lg-6" id="flexbox" *ngIf="productoSeleccionado === Producto.SuperMarioBros">
-    <!--<div class="col-lg-6" id="flexbox" *ngIf="productoSeleccionado === Producto.SuperMarioBros">-->
         <h5 class="card-title text-center">Super Mario Bros</h5>
         <img src="assets/img/Mario Bros.png" class="d-block mx-auto" style="height: 10rem" alt="Super Mario Bros">
         <p class="card-text">Precio: $20000.00</p>
@@ -30,7 +27,7 @@
         <button type="submit" class="btn btn-success">Realizar Operacion</button>
         </form>
     </div>
-    <!--<div class="col-lg-6" id="flexbox" *ngIf="productoSeleccionado === Producto.Sonic">
+    <div class="col-lg-6" id="flexbox" *ngIf="productoSeleccionado === Producto.Sonic">
         <h5 class="card-title text-center">Sonic the Hedgehog</h5>
         <img src="assets/img/Sonic.png" class="d-block mx-auto" style="height: 10rem" alt="Sonic the Hedgehog">
         <p class="card-text">Precio: $5000.00</p>
@@ -85,5 +82,5 @@
         </select>
         <button type="submit" class="btn btn-success">Realizar Operacion</button>
         </form>
-    </div>-->
+    </div>
 </section>
