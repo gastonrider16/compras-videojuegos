@@ -4,10 +4,11 @@
             <div class="col-md-4 mb-4">
                 <div class="card mb-3" style="width: 18rem;">
                     <div class="card-body" id="flexbox">
+                        <script>console.log('PRODUCTOS');</script>
                         <h5 class="card-title text-center">Spider-Man (2018)</h5>
                         <img src="assets/img/Spider-man.png" class="d-block mx-auto" style="height: 10rem" alt="Marvel's Spider-Man">
                         <p class="card-text">Precio: $10000.00</p>
-                        <button class="btn btn-success d-block mx-auto" onclick="comprarAhora('Spider-Man (2018)', 'img/Spider-man.png', 'Spider-Man (2018) es un videojuego de acción y aventuras que sumerge a los jugadores en el papel de Peter Parker, también conocido como Spider-Man. Ambientado en la ciudad de Nueva York, el juego ofrece una narrativa emocionante que sigue las aventuras de Spider-Man mientras enfrenta villanos icónicos y equilibra su vida personal con la responsabilidad de proteger la ciudad.', 10000)">Comprar Ahora</button>
+                        <button class="btn btn-success d-block mx-auto" (click)="onCambiarCompraProducto(Seccion.Compra, Producto.SpiderMan)">Comprar Ahora</button>
                     </div>
                 </div>
             </div>
@@ -18,7 +19,7 @@
                         <h5 class="card-title text-center">Super Mario Bros</h5>
                         <img src="assets/img/Mario Bros.png" class="d-block mx-auto" style="height: 10rem" alt="Super Mario Bros">
                         <p class="card-text">Precio: $20000.00</p>
-                        <button class="btn btn-success d-block mx-auto" onclick="comprarAhora('Super Mario Bros', 'img/Mario Bros.png', 'Super Mario Bros es un clásico juego de plataformas desarrollado por Nintendo. Presenta a Mario, el fontanero intrépido, en una misión para rescatar a la princesa Peach del malvado Bowser. El juego es conocido por su diseño de niveles ingenioso, personajes entrañables y su impacto duradero en la industria de los videojuegos.', 20000)">Comprar Ahora</button>
+                        <button class="btn btn-success d-block mx-auto" (click)="onCambiarCompraProducto(Seccion.Compra, Producto.SuperMarioBros)">Comprar Ahora</button>
                     </div>
                 </div>
             </div>
@@ -29,7 +30,7 @@
                         <h5 class="card-title text-center">Sonic the Hedgehog</h5>
                         <img src="assets/img/Sonic.png" class="d-block mx-auto" style="height: 10rem" alt="Sonic the Hedgehog">
                         <p class="card-text">Precio: $5000.00</p>
-                        <button class="btn btn-success d-block mx-auto" onclick="comprarAhora('Sonic the Hedgehog', 'img/Sonic.png', 'Sonic the Hedgehog es un juego de plataformas y velocidad creado por Sega. Los jugadores asumen el papel de Sonic, un erizo azul sónico, en su lucha contra el malvado Dr. Robotnik. Con su énfasis en la velocidad y el diseño de niveles emocionante, Sonic se convirtió en un ícono de los videojuegos en la década de 1990.', 5000)">Comprar Ahora</button>
+                        <button class="btn btn-success d-block mx-auto" (click)="onCambiarCompraProducto(Seccion.Compra, Producto.Sonic)">Comprar Ahora</button>
                     </div>
                 </div>
             </div>
@@ -42,7 +43,7 @@
                         <h5 class="card-title text-center">Five Nights at Freddy s</h5>
                         <img src="assets/img/Five Nights at Freddys.png" class="d-block mx-auto" style="height: 10rem" alt="Five Nights at Freddy s">
                         <p class="card-text">Precio: $15000.00</p>
-                        <button class="btn btn-success d-block mx-auto" onclick="comprarAhora('Five Nights at Freddy s', 'img/Five Nights at Freddys.png', 'Five Nights at Freddy s es un juego de terror independiente donde el jugador asume el papel de un guardia de seguridad en una pizzería embrujada. Deberás sobrevivir a los animatrónicos maliciosos durante cinco noches.', 15000)">Comprar Ahora</button>
+                        <button class="btn btn-success d-block mx-auto" (click)="onCambiarCompraProducto(Seccion.Compra, Producto.FiveNightsAtFreddys)">Comprar Ahora</button>
                     </div>
                 </div>
             </div>
@@ -53,7 +54,7 @@
                         <h5 class="card-title text-center">The Legend of Zelda: Breath of the Wild</h5>
                         <img src="assets/img/The Legend of Zelda Breath of the Wild.png" class="d-block mx-auto" style="height: 10rem" alt="The Legend of Zelda: Breath of the Wild">
                         <p class="card-text">Precio: $5000.00</p>
-                        <button class="btn btn-success d-block mx-auto" onclick="comprarAhora('The Legend of Zelda: Breath of the Wild', 'img/The Legend of Zelda Breath of the Wild.png', 'The Legend of Zelda: Breath of the Wild es un juego de acción y aventuras que lleva a los jugadores a explorar el vasto reino de Hyrule. Con un mundo abierto y una narrativa envolvente, es considerado uno de los mejores juegos de la serie.', 5000)">Comprar Ahora</button>
+                        <button class="btn btn-success d-block mx-auto" (click)="onCambiarCompraProducto(Seccion.Compra, Producto.Zelda)">Comprar Ahora</button>
                     </div>
                 </div>
             </div>
@@ -64,7 +65,7 @@
                         <h5 class="card-title text-center">The Last of Us</h5>
                         <img src="assets/img/The Last of Us.png" class="d-block mx-auto" style="height: 10rem" alt="The Last of Us">
                         <p class="card-text">Precio: $30000.00</p>
-                        <button class="btn btn-success d-block mx-auto" onclick="comprarAhora('The Last of Us', 'img/The Last of Us.png', 'The Last of Us es un juego de acción y supervivencia que sigue la historia de Joel y Ellie mientras luchan por sobrevivir en un mundo postapocalíptico. Con una narrativa conmovedora y jugabilidad intensa, se ha ganado el reconocimiento como un clásico moderno.', 30000)">Comprar Ahora</button>
+                        <button class="btn btn-success d-block mx-auto" (click)="onCambiarCompraProducto(Seccion.Compra, Producto.TheLastOfUs)">Comprar Ahora</button>
                     </div> 
                 </div>
             </div>

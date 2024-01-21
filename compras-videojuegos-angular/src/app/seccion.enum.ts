@@ -4,5 +4,6 @@ export enum Seccion {
     IniciarSesion = 'IniciarSesion',
     Registrarse = 'Registrarse',
     Contacto = 'Contacto',
-    RecuperacionCuenta = 'RecuperacionCuenta'
+    RecuperacionCuenta = 'RecuperacionCuenta',
+    Compra = 'Compra'
 }
